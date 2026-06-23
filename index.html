@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Encryption Chat Lab</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="app">
+  <div>
+    <div class="title">Encryption Chat Lab</div>
+    <div class="subtitle">Classical ciphers — Caesar, Vigenère, Rail Fence, Playfair</div>
+  </div>
+
+  <!-- Cipher Selection -->
+  <div class="card">
+    <div class="section-label">1. Choose cipher</div>
+    <div class="cipher-grid">
+      <button class="cipher-btn active" data-cipher="caesar">Caesar</button>
+      <button class="cipher-btn" data-cipher="vigenere">Vigenère</button>
+      <button class="cipher-btn" data-cipher="railfence">Rail Fence</button>
+      <button class="cipher-btn" data-cipher="playfair">Playfair</button>
+    </div>
+    <div class="hint" id="hint"></div>
+  </div>
+
+  <!-- Input -->
+  <div class="card">
+    <div class="section-label">2. Set key & message</div>
+
+    <div class="input-row">
+      <div class="field" style="max-width:160px">
+        <label id="key-label">Key</label>
+        <input id="key-input" type="text" value="3" />
+      </div>
+
+      <div class="field">
+        <label>Sender (User A)</label>
+        <input id="sender-input" type="text" value="User A" />
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Plaintext message</label>
+      <textarea id="msg-input">HELLO WORLD</textarea>
+    </div>
+
+    <div class="actions">
+      <button class="send-btn" id="send-btn">Encrypt & Send →</button>
+      <button class="clear-btn" id="clear-btn">Clear chat</button>
+    </div>
+  </div>
+
+  <!-- Chat -->
+  <div class="card">
+    <div class="section-label">Chat history</div>
+    <div class="chat-area" id="chat-area">
+      <div class="chat-empty">No messages yet — send one above.</div>
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
